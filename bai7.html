@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [2, 5, 6, 8, 11, 53, 23, 46, 22, 17];
+    V = parseInt(prompt("Nhập 1 số: "));
+    let check = false
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] === V) {
+            document.write(V + " is in the array" + "<br>");
+            index = i;
+            removed = num.splice(index,1);
+            document.write(num);
+            check = true;
+            break;
+        }
+    }
+    if (check === false) {
+        document.write(V + " is not in the array");
+    }
+</script>
+</body>
+</html>
